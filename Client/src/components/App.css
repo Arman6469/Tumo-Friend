@@ -1,0 +1,13 @@
+.bgimage {
+  background-image: url(../images/tumo.jpg);
+  width: 100%;
+  background-size: cover;
+  height: -webkit-fill-available;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.start{
+    text-align: center;
+    font-size:30px;
+}
