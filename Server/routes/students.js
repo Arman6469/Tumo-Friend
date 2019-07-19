@@ -16,8 +16,13 @@ router.get('/students/:email', passport.authenticate('basic', { session: false }
       location: req.params.location
     }
 
-    db.getClient().collection("students").findOne({email: student.email},
-      function(err,results){
+    db.getClient().collection("students").findOne({email: req.params.email},
+      function(err,result){
+        if(result){
+          res.send(result)
+        }else{
+          res.send("chka")
+        }
        
       }
     )
