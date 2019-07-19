@@ -1,20 +1,19 @@
-.logintext{
-  
-   margin-bottom: 20px;
-   font-family: 'Noto Sans TC', sans-serif;
+.logintext {
+  margin-top: 200px;
+  margin-bottom: 20px;
+  font-family: "Noto Sans TC", sans-serif;
 }
-.bgc{
-    background-image: url(../images/students.jpg);
-    height: -webkit-fill-available;
+.logindiv {
+  width: 600px !important;
 }
-
-.logindiv{
-    width: 600px !important;
+.btn-primary {
+  background-color: black !important;
+  border-color: black;
 }
-.btn-primary{
-    background-color: black !important;
-    border-color:black;
+.submit {
+  display: flex;
+  justify-content: center;
 }
-.entertext{
-    
+.dont {
+  text-align: center;
 }

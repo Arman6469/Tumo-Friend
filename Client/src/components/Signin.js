@@ -32,12 +32,14 @@ export default function Signin() {
               placeholder="Password"
             />
           </div>
-          <button type="submit" className="btn btn-primary">
-            Submit
-          </button>
+          <div className="submit">
+            <button type="submit" className="btn btn-primary">
+             Log in
+            </button>
+          </div>
           <hr />
           <div>
-            <p>
+            <p className="dont">
               Don't have an account ? <Link to="signup">Sign up here!</Link>{" "}
             </p>
           </div>

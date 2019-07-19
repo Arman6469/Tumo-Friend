@@ -10,7 +10,7 @@ export default function App() {
     <div className="bgimage">
     <div>
       <img src={Logo} alt="logo" className="logo" />
-      <p className="start">Let's <Link to='signup'>Login</Link> and Start</p>
+      <p className="start">Let's <Link to='signin'>Login</Link> and Start</p>
       </div>
     </div>
   );
