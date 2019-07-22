@@ -7,27 +7,18 @@ var db = require('../db');
 /* Get a single student: req.user.username */
 router.get('/students/:email', passport.authenticate('basic', { session: false }),
   function(req, res, next) {
-    const student = {
-      email: req.params.email,
-      firstName: req.params.firstName,
-      lastName: req.params.lastName,
-      password: req.params.password,
-      learningTargets: req.params.learningTargets,
-      location: req.params.location
-    }
-
-    db.getClient().collection("students").findOne({email: req.params.email},
-      function(err,result){
-        if(result){
-          res.send(result)
-        }else{
-          res.send("chka")
-        }
-       
-      }
-    )
     // TODO: add api handler to check if email/password exists
     // TODO: Response back with user data
+    db.getClient().collection("students").findOne({email: req.params.email}, (err, results) => {
+      if (err) {
+        res.status(500).send({error: err.message});
+      } else if (!results) {
+        res.status(404).send({error: "Invalid email or password"});
+      } else {
+        res.send(results);
+      }
+    });
+    
 });
 
 /* Create a student account */
